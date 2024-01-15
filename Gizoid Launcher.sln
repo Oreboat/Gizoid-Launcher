@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizoid Launcher", "Gizoid Launcher\Gizoid Launcher.csproj", "{6BD15B9E-1BC5-4F7D-8972-06D3C61C093A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BD15B9E-1BC5-4F7D-8972-06D3C61C093A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD15B9E-1BC5-4F7D-8972-06D3C61C093A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD15B9E-1BC5-4F7D-8972-06D3C61C093A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD15B9E-1BC5-4F7D-8972-06D3C61C093A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32E2E077-AB9B-4E4B-82C8-94D9B0078997}
+	EndGlobalSection
+EndGlobal
