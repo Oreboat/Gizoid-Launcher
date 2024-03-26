@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbmld8n5l8wy7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7vi5"]
+bg_color = Color(0.396078, 0.396078, 0.396078, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v7vi5")
+
+[node name="Launch" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -303.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Buttons" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -82.0
+offset_right = -303.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
+layout_mode = 0
+offset_right = 522.0
+offset_bottom = 81.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Buttons/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Home"
+
+[node name="Button3" type="Button" parent="Buttons/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Versions
+"
+
+[node name="Button2" type="Button" parent="Buttons/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Settings"
+
+[node name="Label" type="Label" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -18.0
+offset_bottom = 18.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Ver Proto: 0.0.1"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 383.0
+offset_right = 119.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 26
+text = "L:0.0.1 Launcher Prototype Created
+L:0.0.1 Text Reading Added
+L:0.0.1 File Downloading Added"
