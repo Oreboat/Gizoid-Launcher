@@ -1,7 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbmld8n5l8wy7"]
+[gd_scene load_steps=13 format=3 uid="uid://cbmld8n5l8wy7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7vi5"]
-bg_color = Color(0.396078, 0.396078, 0.396078, 1)
+[ext_resource type="Texture2D" uid="uid://be6nqlt52hbch" path="res://Image FIles/Update_BG.png" id="1_4giv3"]
+[ext_resource type="Texture2D" uid="uid://df8qxrnuhfegb" path="res://icon.svg" id="1_83ayh"]
+[ext_resource type="Texture2D" uid="uid://dictdwndxp7er" path="res://Image FIles/Update_Sid_Banner.png" id="2_6ocl5"]
+[ext_resource type="Texture2D" uid="uid://cdc7epm78fa8f" path="res://Image FIles/Button.png" id="2_f46ey"]
+[ext_resource type="Texture2D" uid="uid://c5krvg3cwr583" path="res://Image FIles/Update_Bottom_banner.png" id="4_oyurv"]
+[ext_resource type="Texture2D" uid="uid://bwlycp4elu80h" path="res://Image FIles/Settings.png" id="5_3pi73"]
+[ext_resource type="Texture2D" uid="uid://dc1yg7yq3ch4t" path="res://Image FIles/Update_Play.png" id="5_e0vwm"]
+[ext_resource type="Texture2D" uid="uid://odxc183lv4hx" path="res://Image FIles/Update_Home.png" id="7_fofx6"]
+[ext_resource type="Texture2D" uid="uid://b0p6gmoiaov7s" path="res://Image FIles/Update_Verisons_BurgerTime.png" id="8_eccdb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dlldg"]
+texture = ExtResource("1_4giv3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ytf0f"]
+texture = ExtResource("2_6ocl5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qh6tc"]
+texture = ExtResource("4_oyurv")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -18,7 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_v7vi5")
+theme_override_styles/panel = SubResource("StyleBoxTexture_dlldg")
 
 [node name="Launch" type="Panel" parent="."]
 layout_mode = 1
@@ -29,6 +45,48 @@ anchor_bottom = 1.0
 offset_left = -303.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ytf0f")
+
+[node name="TextureRect" type="TextureRect" parent="Launch"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 190.0
+offset_right = 209.0
+offset_bottom = 318.0
+texture = ExtResource("1_83ayh")
+
+[node name="Button" type="Button" parent="Launch"]
+custom_minimum_size = Vector2(163.715, 0)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 338.0
+offset_right = 221.715
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 41
+text = "Play"
+
+[node name="TextureButton" type="TextureButton" parent="Launch"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 328.0
+offset_right = 215.0
+offset_bottom = 410.0
+texture_normal = ExtResource("2_f46ey")
+
+[node name="TextureRect" type="TextureRect" parent="Launch/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -30.0
+offset_right = 48.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_e0vwm")
 
 [node name="Buttons" type="Panel" parent="."]
 layout_mode = 1
@@ -40,6 +98,7 @@ offset_top = -82.0
 offset_right = -303.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qh6tc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
 layout_mode = 0
@@ -47,21 +106,63 @@ offset_right = 522.0
 offset_bottom = 81.0
 alignment = 1
 
-[node name="Button" type="Button" parent="Buttons/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+[node name="TextureButton" type="TextureButton" parent="Buttons/HBoxContainer"]
 layout_mode = 2
-text = "Home"
+texture_normal = ExtResource("2_f46ey")
 
-[node name="Button3" type="Button" parent="Buttons/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-text = "Versions
-"
+[node name="TextureRect" type="TextureRect" parent="Buttons/HBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -45.0
+offset_right = 56.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_fofx6")
 
-[node name="Button2" type="Button" parent="Buttons/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+[node name="TextureButton2" type="TextureButton" parent="Buttons/HBoxContainer"]
 layout_mode = 2
-text = "Settings"
+texture_normal = ExtResource("2_f46ey")
+
+[node name="TextureRect2" type="TextureRect" parent="Buttons/HBoxContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -40.9825
+offset_right = 75.0
+offset_bottom = 40.9825
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_eccdb")
+
+[node name="TextureButton3" type="TextureButton" parent="Buttons/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_f46ey")
+
+[node name="TextureRect" type="TextureRect" parent="Buttons/HBoxContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -35.0
+offset_right = 71.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_3pi73")
 
 [node name="Label" type="Label" parent="Buttons"]
 layout_mode = 1
@@ -70,9 +171,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -191.0
-offset_top = -18.0
-offset_bottom = 18.0
+offset_left = -197.0
+offset_top = -1.0
+offset_right = -6.0
+offset_bottom = 35.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 26
